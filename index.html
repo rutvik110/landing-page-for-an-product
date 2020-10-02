@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>Frontend Mentor | Bookmark landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+
+    <!--active navbar-->
+    <div style="z-index: 100;" id="active-navbar" class="active-navbar">
+        <div style="margin-top: 50px;display: flex;flex-direction: column;align-items: center;width: 100%;" class="nav-items">
+            <div class="break" style="height: 1px;width: 70%;background-color: rgb(173, 173, 173);">
+            </div>
+            <span>FEATURES</span>
+            <div class="break" style="height: 1px;width: 70%;background-color: rgb(173, 173, 173);">
+            </div>
+
+            <span>PRICING</span>
+            <div class="break" style="height: 1px;width: 70%;background-color: rgb(173, 173, 173);"></div>
+
+            <span>CONTACT</span>
+            <div class="break" style="height: 1px;width: 70%;background-color: rgb(173, 173, 173);">
+            </div>
+
+            <div class="login">
+                Login
+            </div>
+            <div style="margin-top: 50px;" class="social-links">
+                <img style="margin: 0px 10px" src="./images/icon-facebook.svg">
+
+                <img style="margin: 0px 10px" src="./images/icon-twitter.svg">
+            </div>
+        </div>
+
+
+    </div>
+    <!-- navbar -->
+    <nav>
+
+
+        <div class="logo">
+            <img src="./images/logo-bookmark.svg">
+
+        </div>
+        <div class="actions">
+            <span>FEATURES</span>
+            <span>PRICING</span>
+            <span>CONTACT</span>
+            <div class="login">
+                Login
+            </div>
+
+        </div>
+        <div style="z-index: 110;" id="hamburger" class="hamburger">
+            <img src="./images/icon-hamburger.svg">
+        </div>
+
+    </nav>
+    <!--navbar end-->
+
+
+    <!-- Hero section -->
+
+    <div class="hero-wrapper">
+        <!-- about-wrapper -->
+        <div class="about-wrapper">
+            <div class="about">
+                <h1>A simple Bookmark Manager</h1>
+                <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+
+                <div class="hero-buttons">
+                    <div class="getonchrome-button">
+                        Get it on Chrome
+                    </div>
+                    <div class="getonfirefox-button">
+                        Get it on Firefox
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- heroimage -->
+        <div class="heroimage-wrapper">
+            <div class="heroimage">
+
+                <img style="width: 100%;height: 100%;" src="./images/illustration-hero.svg">
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- <div style="display: block;z-index: -1;position: absolute;top:30%;right: 0px;transform: translateX(25%);height: 250px;width: 500px;border-radius: 150px;background-color: hsl(231, 69%, 60%);" class="hero-bg">
+
+    </div> -->
+
+    <!-- features-wrapper -->
+
+    <div class="features-wrapper">
+        <div class="features">
+
+            <span>Features</span>
+            <p> Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+
+        </div>
+    </div>
+    <!--tabs section-->
+    <div class="tabs-wrapper">
+        <div style="position: relative;" class="tab-buttons ">
+
+            <div targettab="tabview1" id="tab1" onclick="showtab(event,1)" class="tab-button ">
+                Simple Bookmarging
+                <div id="bottombar" class="bottombar" style="opacity: 1;transition: 650ms;margin: 15px auto;height: 2px;width: 220px;background-color:hsl(0, 94%, 66%);"></div>
+            </div>
+
+            <div targettab="tabview2" id="tab2" onclick="showtab(event,2)" class="tab-button">
+                Speedy Searching
+                <div id="bottombar" class="bottombar" style="opacity: 1;transition: 650ms;margin: 15px auto;height: 2px;width: 220px;background-color:hsl(0, 0%, 89%)"></div>
+            </div>
+
+            <div targettab="tabview3" id="tab3" onclick="showtab(event,3)" class="tab-button">
+                Easy Sharing
+                <div id="bottombar" class="bottombar" style="opacity: 1;transition: 650ms;margin: 15px auto;height: 2px;width: 220px;background-color:hsl(0, 0%, 89%)"></div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+        <!--tab1 -->
+        <div id="tabview1" class="tab active">
+            <div class="tab-left-wrapper">
+                <div class="tab-left">
+                    <img style="width: 100%;height: 100%;" src="./images/illustration-features-tab-1.svg">
+
+                </div>
+            </div>
+            <div class="tab-left-wrapper">
+                <div class="tab-right">
+                    <span>Bookmark in one click</span>
+                    <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                    <div style="background-color:  hsl(231, 69%, 60%);width: 120px;" class="login">
+                        More Info
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--tab2 -->
+        <div style="display: none;" id="tabview2" class="tab">
+            <div class="tab-left-wrapper">
+                <div class="tab-left">
+                    <img style="width: 100%;height: 100%;" src="./images/illustration-features-tab-2.svg">
+
+                </div>
+            </div>
+            <div class="tab-left-wrapper">
+                <div class="tab-right">
+                    <span>Intelligent search</span>
+                    <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
+                    </p>
+                    <div style="background-color:  hsl(231, 69%, 60%);width: 120px;" class="login">
+                        More Info
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--tab3 -->
+        <div id="tabview3" style="display: none;" class="tab">
+            <div class="tab-left-wrapper">
+                <div class="tab-left">
+                    <img style="width: 100%;height: 100%;" src="./images/illustration-features-tab-3.svg">
+
+                </div>
+            </div>
+            <div class="tab-left-wrapper">
+                <div class="tab-right">
+                    <span>Share your bookmarks</span>
+                    <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+                    <div style="background-color:  hsl(231, 69%, 60%);width: 120px;" class="login">
+                        More Info
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--download section-->
+    <div class="download-wrapper">
+
+        <div class="download-section">
+            <span>Download the extension</span>
+            <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+
+        </div>
+
+    </div>
+    <div class="download-options">
+        <div class="chrome">
+            <img src="./images/logo-chrome.svg">
+            <span>Add to Chrome</span>
+            <p>Minimum Version 6.2</p>
+            <div style="margin: 0px;" class="getonchrome-button">
+                Add & Install Extensions
+            </div>
+
+
+        </div>
+        <div class="chrome">
+
+            <img src="./images/logo-firefox.svg">
+            <span>Add to Firefox</span>
+            <p>Minimum Version 5.5</p>
+            <div style="margin: 0px;" class="getonchrome-button">
+                Add & Install Extensions
+            </div>
+
+        </div>
+        <div class="chrome">
+
+
+
+            <img src="./images/logo-opera.svg">
+            <span>Add to Opera</span>
+            <p>Minimum Version 6.6</p>
+            <div style="margin: 0px;" class="getonchrome-button">
+                Add & Install Extensions
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!--faq-->
+
+    <div class="download-wrapper">
+
+        <div class="download-section">
+            <span>Frequently Asked Questions</span>
+            <p>Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-wrapper">
+
+
+        <div class="faq">
+            <div onclick="showanswer(`answer1`,`arrow1`)" id="question" class="que">
+
+                <span> What is Bookmark?</span>
+                <img class="arrow " style="transition: 650ms;" id="arrow1" src="./images/icon-arrow.svg">
+
+
+            </div>
+            <div id="answer1" class="answer ">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+
+            </div>
+        </div>
+
+        <div class="faq">
+            <div onclick="showanswer(`answer2`,`arrow2`)" id="question" class="que">
+
+                <span> How can I request a new browser?</span>
+                <img class="arrow " style="transition: 650ms;" id="arrow2" src="./images/icon-arrow.svg">
+
+
+            </div>
+            <div id="answer2" class="answer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+
+            </div>
+        </div>
+
+        <div class="faq">
+            <div onclick="showanswer(`answer3`,`arrow3`)" id="question" class="que">
+
+                <span>Is there a mobile app?</span>
+                <img class="arrow " style="transition: 650ms;" id="arrow3" src="./images/icon-arrow.svg">
+
+
+            </div>
+            <div id="answer3" class="answer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+
+            </div>
+        </div>
+
+        <div style="background-color:  hsl(231, 69%, 60%);width: 120px;" class="login">
+            More Info
+        </div>
+
+
+
+    </div>
+
+    <!--form-->
+
+    <div style="background-color:hsl(231, 69%, 60%) ;margin: 75px 0px;margin-bottom: 0px;" class="form-wrapper">
+        <div style="display: flex;flex-direction: column;align-items: center;justify-content: space-between;text-align: center;" class="form">
+            <span style="font-size: 15px;
+            font-weight: 300;
+            margin: 50px;
+            color: white;
+            margin-bottom: 10px;">35,000 + Already Joined</span>
+            <span style="margin-bottom: 20px;font-size: 24px;
+            font-weight: 500;color: white;padding: 0px 50px;">Stay up-to-date with what we’re doing</span>
+            <input placeholder="Enter your email address" style="border: none;padding-left: 10px;margin-bottom: 10px;min-width: 260px;border-radius: 6px;height: 35px;" type="email">
+            <div type="submit" style="margin: 5px;width: 130px;padding: 5px 15px;margin-bottom:50px;background-color: hsl(0, 94%, 66%);border-radius: 6px;" class="getonchrome-button">
+                Contact Us
+            </div>
+
+
+        </div>
+    </div>
+
+    <!--footer-->
+
+
+    <footer>
+        <div class="footer">
+            <span style="margin: 25px;font-size: 18px;font-weight: 300px;color: white;">FEATURES</span>
+            <span style="margin: 25px;font-size: 18px;font-weight: 300px;color: white;">PRICING</span>
+            <span style="margin: 25px;font-size: 18px;font-weight: 300px;color: white;">CONTACT</span>
+
+            <div style="margin: 25px;" class="social-links">
+                <img style="margin: 0px 10px" src="./images/icon-facebook.svg">
+
+                <img style="margin: 0px 10px" src="./images/icon-twitter.svg">
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+<script>
+    var hamburger = document.getElementById('hamburger'),
+        activenavbar = document.getElementById('active-navbar'),
+        tablist = document.getElementsByClassName('tab-button'),
+        tabviewlist = document.getElementsByClassName('tab');
+
+
+
+
+    function showtab(event, tabindex) {
+
+        const bottombarlist = document.getElementsByClassName('bottombar');
+        var tabviewlist = document.getElementsByClassName('tab');
+
+
+        for (let i = 0; i < bottombarlist.length; i++) {
+
+            bottombarlist[i].style.opacity = 0.5;
+            bottombarlist[i].style.backgroundColor = 'hsl(0, 0%, 89%)';
+
+
+        }
+
+        for (let i = 0; i < tablist.length; i++) {
+
+            tablist[i].classList.remove('active');
+
+
+
+
+        }
+        for (let i = 0; i < tablist.length; i++) {
+
+            tabviewlist[i].style.display = 'none';
+            tabviewlist[i].style.opacity = 0;
+            tabviewlist[i].classList.remove('active');
+
+
+
+        }
+
+        if (tabindex == 1) {
+
+            bottombarlist[0].style.opacity = 1;
+            bottombarlist[0].style.backgroundColor = 'hsl(0, 94%, 66%)';
+            tabviewlist[0].style.opacity = 1;
+            tabviewlist[0].classList.toggle('active');
+            tabviewlist[0].style.display = 'flex';
+
+        } else if (tabindex == 2) {
+
+            bottombarlist[1].style.opacity = 1;
+            bottombarlist[1].style.backgroundColor = 'hsl(0, 94%, 66%)';
+            tabviewlist[1].style.opacity = 1;
+            tabviewlist[1].classList.toggle('active');
+            tabviewlist[1].style.display = 'flex';
+
+
+
+        } else {
+
+            bottombarlist[2].style.opacity = 1;
+            bottombarlist[2].style.backgroundColor = 'hsl(0, 94%, 66%)';
+            tabviewlist[2].style.opacity = 1;
+            tabviewlist[2].classList.toggle('active');
+            tabviewlist[2].style.display = 'flex';
+
+        }
+
+
+
+    }
+
+    hamburger.addEventListener('click', function(event) {
+
+        activenavbar.classList.toggle('active');
+
+    });
+
+    function showanswer(answer, arrow) {
+
+        const answers = document.getElementById(`${answer}`);
+        const arrows = document.getElementById(`${arrow}`);
+
+        answers.classList.toggle('active');
+        arrows.classList.toggle('active');
+
+
+
+    }
+</script>
+
+
+
+</html>
